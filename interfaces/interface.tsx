@@ -1,24 +1,16 @@
-export interface Patch {
-  small: string;
-  large: string;
-}
 
-export interface Links {
-  patch: Patch;
-  reddit: {
-    campaign: string;
-    launch: string;
-    media: string;
-    recovery: string | null;
-  };
-}
 
 export interface Launch {
   id: string;
   name: string;
   date_utc: string;
   details: string;
-  links: Links;
+  links: {
+    patch:{
+      small: string;
+      large: string;
+    }
+  }
 }
 
 export interface LaunchResponse {

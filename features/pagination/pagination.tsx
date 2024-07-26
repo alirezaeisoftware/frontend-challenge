@@ -8,7 +8,7 @@ const Pagination = ({
   className = "",
 }: IPaginationProps) => {
   const pageNumbers: (number | string)[] = [];
-  const delta = 2;
+  const delta: number = 2;
   const range = {
     start: Math.max(2, currentPage - delta),
     end: Math.min(totalPages - 1, currentPage + delta),
